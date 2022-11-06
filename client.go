@@ -100,7 +100,7 @@ func (p *Provider) getRecords(ctx context.Context, zoneID string, zone string) (
 			case types.RRTypeTxt, types.RRTypeSpf:
 				var err error
 				value = re.ReplaceAllString(value, "")
-				//fmt.Println(value)
+				fmt.Println(value)
 				value, err = strconv.Unquote(value)
 				if err != nil {
 					return records, fmt.Errorf("Error unquoting TXT/SPF record: %s", err)
